@@ -1,0 +1,134 @@
+.layout {
+  display: grid;
+  grid-template-columns: 315px 1fr;
+  gap: 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  @media (max-width: 1280px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wrapper {
+  border-radius: 12px;
+  border: 1px solid #4d5761;
+  background: rgba(38, 39, 43, 0.24);
+}
+
+.wrapperInner {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px 8px;
+}
+
+.autoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 4px;
+}
+
+.title {
+  color: #70707b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+.assetBtn {
+  border-radius: 8px;
+  border: 1px solid #353438;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  padding: 12px 12px 12px 8px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &.active {
+    border-color: #6a56f6;
+    background: linear-gradient(0deg, rgba(106, 86, 246, 0.16) 0%, rgba(106, 86, 246, 0.16) 100%),
+      rgba(255, 255, 255, 0.02);
+    .symbol {
+      color: white;
+    }
+  }
+}
+
+.value,
+.symbol,
+.network {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.value {
+  color: #b9c0d4;
+  margin-right: 2px;
+  margin-left: 6px;
+}
+.symbol {
+  color: #b9c0d4;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+.network {
+  color: rgba(185, 192, 212, 0.42);
+}
+
+.icon {
+  flex: 0 0 26px;
+  margin-right: 6px;
+}
+
+.label {
+  color: #70707b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+.resultText {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.4px;
+}
+
+.smallText {
+  color: #70707b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+.smallWhiteText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.bonusBlock {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  & .title {
+    color: #b9c0d4;
+  }
+  & .wrapper {
+    padding: 12px 12px 12px 8px;
+    box-sizing: border-box;
+    border: 1px solid #353438;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

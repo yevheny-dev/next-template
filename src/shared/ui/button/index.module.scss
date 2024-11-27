@@ -1,0 +1,207 @@
+.base {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  border: none;
+  outline: none;
+  position: relative;
+
+  &.anim::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at var(--x) var(--y),
+      rgba(255, 255, 255, 0.25),
+      transparent 70%
+    );
+    border-radius: inherit;
+    pointer-events: none;
+    transition: background 0.3s;
+    z-index: 1;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+
+  &.check {
+    pointer-events: none;
+  }
+  &.size44 {
+    min-height: 44px;
+    padding: 0 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.32px;
+  }
+  &.size48 {
+    min-height: 48px;
+    padding: 10px 10px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.32px;
+  }
+  &.size52 {
+    min-height: 52px;
+    padding: 10px 10px;
+    border-radius: 42px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.36px;
+  }
+  &.size58 {
+    min-height: 58px;
+    padding: 0 28px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.36px;
+  }
+  &.size36 {
+    min-height: 36px;
+    padding: 10px 10px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: 0.24px;
+  }
+  &.size40 {
+    min-height: 40px;
+    padding: 10px 10px;
+    border-radius: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 110%;
+    letter-spacing: 0.28px;
+  }
+  &.size32 {
+    min-height: 32px;
+    padding: 0 12px;
+    border-radius: 35px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.24px;
+  }
+  &.fullWidth {
+    width: 100%;
+  }
+  &.primary {
+    background-color: #6a56f6;
+    border: 1px transparent linear-gradient(93.76deg, #ffffff6b 11.73%, #ffffff22 95.7%);
+    color: #ffffff;
+
+    transition: all 0.25s ease;
+    &:hover {
+      background-color: #9437ff;
+    }
+    &:focus {
+      background-color: #7619ed;
+    }
+    &:active {
+      box-shadow: none;
+      background-color: #7619ed;
+    }
+    &:disabled {
+      background: repeating-linear-gradient(
+        -60deg,
+        #16131e,
+        #16131e 2.5px,
+        #1e1d27 2px,
+        #1e1d27 4px
+      );
+      color: #57565e;
+      pointer-events: none;
+      box-shadow: none;
+    }
+  }
+  &.secondary {
+    background-color: rgba(128, 35, 247, 0.2);
+    background-blend-mode: color-dodge, normal;
+    color: #8023f7;
+    &:hover {
+      color: #fafafa;
+      background-color: rgba(148, 55, 255, 0.4);
+    }
+    &:active {
+      background-color: rgba(118, 25, 237, 0.4);
+    }
+    &:disabled {
+      background: repeating-linear-gradient(
+        -60deg,
+        #100a1e,
+        #100a1e 2.5px,
+        #181427 2px,
+        #181427 4px
+      );
+      color: #57565e;
+      pointer-events: none;
+      box-shadow: none;
+    }
+    &:focus:not(&:active) {
+    }
+  }
+  &.outline {
+    color: #7d89b0;
+    border: 1px solid #4d5761;
+    position: relative;
+    &:hover {
+      border-color: #9437ff;
+      color: #9437ff;
+    }
+    &:disabled {
+      border-color: #57565e;
+      color: #57565e;
+    }
+    &:active {
+      border-color: #7619ed;
+      color: #7619ed;
+    }
+  }
+  &.white {
+    background-color: #e4e4e7;
+    background-blend-mode: hard-light;
+    color: #0a0914;
+    &:hover {
+      background-color: #c5c5c5;
+    }
+    &:disabled {
+      background-color: rgba(228, 228, 231, 0.04);
+    }
+    &:active {
+      border: 2px solid rgba(250, 250, 250, 0.12);
+      background-color: rgba(197, 197, 197, 0.9);
+    }
+  }
+  &.loading {
+    border: 1px #6A56F6;
+    background: rgba(106, 86, 246, 0.20);
+    color: #6A56F6;
+    &:hover {
+      background: rgba(106, 86, 246, 0.20);
+    }
+  }
+}
+//.outlineDecor {
+//  width: 100%;
+//  height: 100%;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  bottom: 0;
+//  right: 0;
+//}

@@ -1,0 +1,41 @@
+.assetBtn {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #353438;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  padding: 12px 12px 12px 8px;
+  transition: 0.2s;
+
+  &.active {
+    border-color: #6a56f6;
+    background: linear-gradient(0deg, rgba(106, 86, 246, 0.16) 0%, rgba(106, 86, 246, 0.16) 100%),
+    rgba(255, 255, 255, 0.02);
+    .symbol {
+      color: white;
+    }
+  }
+}
+
+.value,
+.symbol,
+.network {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.value {
+  color: #b9c0d4;
+  margin-right: 2px;
+  margin-left: 6px;
+}
+.symbol {
+  color: #b9c0d4;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+.network {
+  color: rgba(185, 192, 212, 0.42);
+}

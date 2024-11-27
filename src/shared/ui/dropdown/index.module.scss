@@ -1,0 +1,185 @@
+.dropdown {
+  border-radius: 8px;
+  border: 1px solid #2c2b30;
+  background-image: "url('/images/tokenomics/cryptoSelectBg.png')";
+  background-size: 'cover';
+  background-repeat: 'no-repeat';
+  background-position: 'center';
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.selected {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: none;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  border-radius: 8px;
+}
+
+// .options {
+//   background: black;
+//   border: 1px solid #2c2b30;
+//   border-radius: 8px;
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   right: 0;
+//   margin-top: 8px;
+//   padding: 8px 0;
+//   list-style: none;
+//   z-index: 30;
+
+//   .option {
+//     padding: 8px 12px;
+//     cursor: pointer;
+//     color: white;
+//     font-size: 14px;
+//     font-weight: 600;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     gap: 6px;
+
+//     &:hover {
+//       background: rgba(185, 192, 212, 0.1);
+//     }
+//   }
+// }
+
+.options {
+  position: absolute;
+  z-index: 1000; // Set a high z-index to ensure visibility
+  border-radius: 8px;
+  color: #b9c0d4;
+
+  background-size: cover;
+  background-position: center;
+  background-image: url('/images/dropdownBg.png');
+  border: 1px solid #6a56f6; // Optional border for dropdown
+  max-height: 348px; // Set maximum height (adjust as needed)
+
+  width: 100%; // Match the width of the dropdown
+  margin: 0; // Remove default margin
+  padding: 0; // Remove default padding
+  list-style: none; // Remove list styling
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Optional shadow for dropdown
+  transition: all 0.2s ease; // Smooth transition
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  transition: all 0.2s ease;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer; // Pointer cursor for options
+  display: flex;
+  flex-direction: row;
+  color: rgb(195, 198, 205);
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 4px;
+  padding: 12px 12px 12px 8px;
+  gap: 6px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(250, 250, 250, 1);
+  }
+}
+
+.scrollableOptions {
+  padding-left: 8px;
+  max-height: 260px; // Set maximum height (adjust as needed)
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-right: 4px;
+  scrollbar-color: #b9c0d4 rgba(2, 1, 6, 0.1);
+  scrollbar-width: thin;
+
+  /* Custom scrollbar for WebKit browsers */
+  ::-webkit-scrollbar {
+    width: 2px; /* Custom width */
+    height: 12px; /* Custom height for horizontal scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(2, 1, 6, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #b9c0d4; /* Scrollbar thumb color */
+    border-radius: 10px; /* Makes the scrollbar thumb rounded */
+    border: 3px solid rgba(2, 1, 6, 0.1); /* Adds space around the thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b9c0d4;
+  }
+}
+
+/* Make the first list item sticky */
+.fixedOption {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Ensure it stays on top of the scrollable items */
+
+  cursor: pointer; // Pointer cursor for options
+  display: flex;
+  flex-direction: row;
+  color: #fafafa;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  margin-bottom: 4px;
+  padding: 12px 12px 12px 8px;
+  gap: 6px;
+}
+
+.tokenOption {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 4px;
+  margin-top: 12px;
+  scrollbar-color: #b9c0d4 rgba(2, 1, 6, 0.1);
+  scrollbar-width: thin;
+  max-height: 300px; // Set maximum height (adjust as needed)
+
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-right: 4px;
+  /* Custom scrollbar for WebKit browsers */
+  ::-webkit-scrollbar {
+    width: 2px; /* Custom width */
+    height: 12px; /* Custom height for horizontal scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(2, 1, 6, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #b9c0d4; /* Scrollbar thumb color */
+    border-radius: 10px; /* Makes the scrollbar thumb rounded */
+    border: 3px solid rgba(2, 1, 6, 0.1); /* Adds space around the thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b9c0d4;
+  }
+}

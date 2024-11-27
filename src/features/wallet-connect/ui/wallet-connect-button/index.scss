@@ -1,0 +1,29 @@
+.walletBtn {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at var(--x) var(--y),
+      rgba(255, 255, 255, 0.25),
+      transparent 70%
+    );
+    border-radius: inherit;
+    pointer-events: none;
+    transition: background 0.3s;
+    z-index: 1;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+
+  &.check {
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,95 @@
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: 0.96px;
+  background: linear-gradient(92deg, #fff 12.3%, #b3b8db 96.21%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    letter-spacing: 0.56px;
+  }
+}
+
+.guideTitle {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.96px;
+  width: 90%;
+  background: rgba(185, 192, 212, 1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 0.56px;
+  }
+}
+
+.guideText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  margin-top: 16px;
+  letter-spacing: 0.96px;
+  background: rgba(185, 192, 212, 0.64);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-top: 16px;
+    letter-spacing: 0.56px;
+  }
+}
+
+.guidePoint {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.active {
+  background: rgba(106, 86, 246, 1);
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: color 0.3s;
+  color: red;
+}
+
+.arrow:disabled {
+  color: #ddd;
+  cursor: not-allowed;
+}

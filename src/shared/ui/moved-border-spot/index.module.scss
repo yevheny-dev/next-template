@@ -1,0 +1,29 @@
+.borderSpot {
+  position: absolute;
+  width: 300px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+
+  animation: movedBorderSpot 4s linear infinite;
+  background-image:
+          conic-gradient(from 0 at 50% 50%,
+          rgba(255, 255, 255, .5) 0deg,
+          rgba(255, 255, 255, 0) 60deg,
+          rgba(255, 255, 255, 0) 310deg,
+          rgba(255, 255, 255, .5) 360deg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes movedBorderSpot {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg)
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg)
+  }
+}
